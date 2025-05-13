@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from './components/frontend/NavBar/NavBar'
 
 function App() {
   return (
-    <div>
-      <h1>hello</h1>
+    <div className='App'>
+      <NavBar/>
     </div>
   )
 }
