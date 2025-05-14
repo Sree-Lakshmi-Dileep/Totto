@@ -16,11 +16,8 @@ function NavBar() {
               <button className='button'>HOME</button>
              <button className='button'>ABOUT</button>
               <button className='button'>TOYS</button>
-
-
           </div>
         </div>
-        
       </div>
       <div className="right"></div>
       

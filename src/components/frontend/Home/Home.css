@@ -1,0 +1,11 @@
+.container{
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(47, 143, 227),white,rgb(240, 72, 193));
+    height: 800px;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    
+    
+    
+}
