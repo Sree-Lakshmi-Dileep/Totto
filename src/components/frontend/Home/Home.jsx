@@ -16,7 +16,7 @@ function Home() {
     },
     {
       src: "https://media.istockphoto.com/id/1371667612/photo/cute-unicorn-isolated-on-white-background-plush-toys-for-kids-pink-colors.jpg?s=612x612&w=0&k=20&c=w1nEjiStj2y5HjfklGvdIKhADkdRWpb5p3gCVkkWuf4=",
-      caption: "Plush Toys",
+      caption: "Soft Toys",
     },
     {
       src: "https://media.istockphoto.com/id/153499035/photo/back-to-school-painting-supplies.jpg?s=612x612&w=0&k=20&c=H0ncaaHoVZQSBe-MOhOEU7IhGPYC4QzwBrnzwmn-m-M=",
@@ -28,26 +28,26 @@ function Home() {
     },
     {
       src: "https://target.scene7.com/is/image/Target/GUEST_674beb55-36fe-4a04-bb81-b7c890f3a7b6?wid=300&hei=300&fmt=pjpeg",
-      caption: "Dolls",
-    },
-    {
-      src: "https://m.media-amazon.com/images/I/41Rr6LrZgcL.jpg",
-      caption: "Pretend Play",
-    },
-    {
-      src: "https://m.media-amazon.com/images/I/71hInyyallL._AC_UF1000,1000_QL80_.jpg",
       caption: "Outdoor Toys",
     },
     {
+      src: "https://m.media-amazon.com/images/I/41Rr6LrZgcL.jpg",
+      caption: "Puzzles and board games",
+    },
+    {
+      src: "https://m.media-amazon.com/images/I/71hInyyallL._AC_UF1000,1000_QL80_.jpg",
+      caption: "Pretend Play",
+    },
+    {
       src: "https://m.media-amazon.com/images/I/415ul8gB3yL._AC_UF1000,1000_QL80_.jpg",
-      caption: "Board Games",
+      caption: "Toddler",
     },
   ];
 
   return (
     <div className='container'>
       <section className="welcomes">
-        <h1 className='head'>Unbox the Magic of Childhood</h1>
+        <h1 className='head'>Unbox the  <br /> Magic of Childhood....</h1>
         <img src="/welcome.png" alt="Welcome" className="welcome" />
       </section>
 
@@ -59,6 +59,37 @@ function Home() {
           </div>
         ))}
       </section>
+      <div className="footer">
+        <div className="footlogo">
+          <img src="logo.png" alt="" className="footerlogo" />
+        </div>
+        <div className="footcontent">
+          <div className="grid-item">
+            <h1>USEFUL LINKS</h1>
+            <div className="list">
+              <li>About Us</li>
+              <li>Bulk Ordering</li>
+              <li>Cancellation Policy</li>
+            </div>
+          </div>
+          <div className="grid-item">
+            <h1>SUPPORT</h1>
+            <div className="list">
+              <li>My Account</li>
+              <li>Feedbacks</li>
+              <li>Contact Us</li>
+            </div>
+          </div>
+          <div className="grid-item">
+            <h1>CONTACT US</h1>
+            <div className="list">
+              <li>Custumer Care:care@totto.co.in</li>
+              <li>Social media collabs:socialmedia@totto.co.in</li>
+              <li>Affilate Inqiries:inq@totto.co.in</li>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

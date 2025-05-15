@@ -1,36 +1,40 @@
 .container{
     width: 100%;
     background: linear-gradient(to bottom, rgb(47, 143, 227),white,rgb(240, 72, 193));
-    height: 2000px;
+    height: 1900px;
     margin-top: 20px;
     position: absolute;
     left: 0;
 }
 
 .welcomes{
-    width: 75%;
+    width: 100%;
     justify-content: center;
-    display: flex;
-    margin-left: 100px;
+    display: flex; 
+    
+    
+    
 
 }
 
 .welcome{
     width: 500px;
     height: 500px;
-    margin-left: 100px;
+    margin-left: 150px;
+   
 }
 
 .head{
     margin-top: 200px;
     font-size:50px;
+    font-style: italic;
+    color: rgb(16, 25, 112);
+   
 }
 
-{/*.cat{
-    width: 300px;
-    height: 300px;
-    display: inline-table;
-}*/}
+
+
+
 .category {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -44,7 +48,13 @@
 .cat img {
   width: 300px;
   height: 300px;
-  border-radius: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cat img:hover{
+  transform: scale(0.9);
+  transition: .5s;
 }
 
 .caption {
@@ -52,3 +62,29 @@
   font-weight: bold;
   font-size: 1rem;
 }
+.caption{
+  line-height: 1px;
+
+}
+
+
+.footer{
+  background-color:rgb(244, 125, 210) ;
+  margin-top: 70px;
+  height: 300px;
+}
+
+.footerlogo{
+  width: 50px;
+  height: 50px;
+  margin-left: 730px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.footcontent{
+  display: flex;
+  gap: 100px;
+  margin-left: 350px;
+}
+
+
