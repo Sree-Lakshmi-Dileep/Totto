@@ -1,11 +1,54 @@
 .container{
     width: 100%;
     background: linear-gradient(to bottom, rgb(47, 143, 227),white,rgb(240, 72, 193));
-    height: 800px;
+    height: 2000px;
     margin-top: 20px;
     position: absolute;
     left: 0;
-    
-    
-    
+}
+
+.welcomes{
+    width: 75%;
+    justify-content: center;
+    display: flex;
+    margin-left: 100px;
+
+}
+
+.welcome{
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+}
+
+.head{
+    margin-top: 200px;
+    font-size:50px;
+}
+
+{/*.cat{
+    width: 300px;
+    height: 300px;
+    display: inline-table;
+}*/}
+.category {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+}
+
+.cat {
+  text-align: center;
+}
+
+.cat img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
 }
