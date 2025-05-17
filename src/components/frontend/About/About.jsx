@@ -1,10 +1,11 @@
 import React from 'react'
+import './About.css'
 
 
 
 function About() {
   return (
-    <div>
+    <div className='abcontainer'>
         
       <h1>
         About Us
