@@ -1,8 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import './Home.css';
-
-
-
 
 function Home() {
   const images = [
@@ -53,12 +51,13 @@ function Home() {
 
       <section className="category">
         {images.map((item, index) => (
-          <div className="cat" key={index}>
+          <Link to={`/category/${encodeURIComponent(item.caption)}`} key={index} className="cat">
             <img src={item.src} alt={`Category: ${item.caption}`} className="cat-image" />
             <p className="caption">{item.caption}</p>
-          </div>
+          </Link>
         ))}
       </section>
+
       <div className="footer">
         <div className="footlogo">
           <img src="logo.png" alt="" className="footerlogo" />
@@ -83,9 +82,9 @@ function Home() {
           <div className="grid-item">
             <h1>CONTACT US</h1>
             <div className="list">
-              <li>Custumer Care:care@totto.co.in</li>
-              <li>Social media collabs:socialmedia@totto.co.in</li>
-              <li>Affilate Inqiries:inq@totto.co.in</li>
+              <li>Customer Care: care@totto.co.in</li>
+              <li>Social media collabs: socialmedia@totto.co.in</li>
+              <li>Affiliate Inquiries: inq@totto.co.in</li>
             </div>
           </div>
         </div>
@@ -95,4 +94,3 @@ function Home() {
 }
 
 export default Home;
-
