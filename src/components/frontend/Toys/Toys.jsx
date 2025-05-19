@@ -14,7 +14,8 @@ function ToysPage() {
           <div key={toy.id} className="toy-card">
             <img src={toy.imageUrl} alt={toy.name} width="200"  />
             <h3>{toy.name}</h3>
-            <p>${toy.price.toFixed(2)}</p>
+            <p>INR {toy.price.toFixed(2)}</p>
+            <button className="more">view details</button>
           </div>
         ))}
       </div>
