@@ -25,7 +25,7 @@ function CategoryToysPage() {
               <img src={toy.imageUrl} alt={toy.name} />
               <h3>{toy.name}</h3>
               
-              <p>${toy.price.toFixed(2)}</p>
+              <p>INR {toy.price.toFixed(2)}</p>
             </div>
           ))
         ) : (
