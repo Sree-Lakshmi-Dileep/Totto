@@ -17,7 +17,7 @@ function CategoryToysPage() {
 
   return (
     <div className='contain'>
-      <h1>{categoryName}</h1>
+      <h1 className='cathead'>{categoryName}</h1>
       <div className="toy-list">
         {filteredToys.length > 0 ? (
           filteredToys.map((toy) => (

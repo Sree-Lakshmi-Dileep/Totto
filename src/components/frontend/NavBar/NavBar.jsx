@@ -42,7 +42,36 @@ function NavBar() {
           </div>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+  <div className="icon-container">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png"
+      className="cart"
+      alt="Cart"
+    />
+    <span className="icon-label">Cart</span>
+  </div>
+  <div className="icon-container">
+      <img
+      src="https://cdn-icons-png.flaticon.com/512/1040/1040260.png"
+      className="favour"
+      alt="favourites"
+    />
+    <span className="icon-label">Favourites</span>
+  </div>
+  <div className="icon-container">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/13895/13895645.png"
+      className="login"
+      alt="login"
+    />
+    <span className="icon-label">Login</span>
+    
+ </div>
+  
+ 
+</div>
+
     </div>
   );
 }
