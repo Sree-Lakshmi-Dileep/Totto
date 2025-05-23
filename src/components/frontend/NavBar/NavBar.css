@@ -116,3 +116,16 @@
 .icon-container:hover .icon-label {
   opacity: 1;
 }
+
+.b_login{
+  margin-left: 100px;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.b_login:hover{
+    background-color: rgb(46, 4, 42);
+    color: rgb(235, 240, 240);
+}

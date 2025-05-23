@@ -1,0 +1,64 @@
+.div1{
+    position: fixed;    
+    background-color: rgb(219, 203, 234);
+    width:1550px;
+    height: 800px;
+    left: 0;
+
+}
+
+.div2{
+    background-color: antiquewhite;
+    margin-top: 200px;
+    margin-left: 450px;
+    width: 600px;
+    height: 300px;
+}
+
+.l_head{
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.d_email{
+    margin-left: 180px;
+    margin-top: 30px;
+    height: 25px;
+
+}
+
+.d_pass{
+    margin-left: 175px;
+    margin-top: 30px;
+    height: 10px;
+
+}
+
+.submitbutton{
+    
+    margin-left: 250px;
+    margin-top: 50px;
+    height: 20px;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.i_email{
+    margin-left: 30px;
+}
+
+.i_pass{
+    margin-left: 10px;
+}
+.sign{
+    margin-left: 170px;
+    margin-top: 50px;
+}
+
+.submitbutton:hover{
+    background-color: rgb(9, 176, 26);
+    color: rgb(20, 69, 69);
+    
+}

@@ -59,17 +59,11 @@ function NavBar() {
     />
     <span className="icon-label">Favourites</span>
   </div>
-  <div className="icon-container">
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/13895/13895645.png"
-      className="login"
-      alt="login"
-    />
-    <span className="icon-label">Login</span>
+   <div className='login'>
+       <Link to="/login"><button className="b_login">Login</button></Link>
+
+   </div>
     
- </div>
-  
- 
 </div>
 
     </div>
