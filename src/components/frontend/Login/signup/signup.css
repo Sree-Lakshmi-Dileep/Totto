@@ -1,0 +1,66 @@
+.signup-container{
+    margin-top: 250px;
+    background: linear-gradient(to bottom, rgb(47, 143, 227),rgb(240, 72, 193));
+    width: 500px;
+    height: 200px;
+    margin-left: 500px;
+    border-radius: 20px;
+    
+
+}
+
+.signhead{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.s_mail{
+    padding-left: 140px;
+}
+
+.next{
+    margin-left: 220px;
+    margin-top:30px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+
+.next:hover{
+    background-color: rgb(11, 215, 123);
+}
+
+.next2{
+    margin-left: 120px;
+    margin-top:30px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+
+.next2:hover{
+    background-color: rgb(11, 215, 123);
+}
+
+.sign2{
+    margin-left: 100px;
+}
+
+.sign3{
+    margin-left: 110px;
+}
+
+.sub3{
+    margin-left:200px ;
+    margin-top: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sub3:hover{
+    background-color: rgb(11, 215, 123);
+}

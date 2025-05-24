@@ -54,11 +54,16 @@
 }
 .sign{
     margin-left: 170px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .submitbutton:hover{
     background-color: rgb(9, 176, 26);
     color: rgb(20, 69, 69);
     
+}
+
+.forgot{
+    margin-left: 400px;
+
 }
