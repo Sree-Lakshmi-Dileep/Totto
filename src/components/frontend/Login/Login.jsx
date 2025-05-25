@@ -20,7 +20,9 @@ function Login() {
           <button type="submit" className="submitbutton">
             Login
           </button>
-          <p className='forgot'>forgot password</p>
+          <p className='forgot'>
+          <Link to="/forgot-password">Forgot password?</Link>
+           </p>
         </form>
 
 

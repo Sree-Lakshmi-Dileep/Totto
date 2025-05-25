@@ -1,0 +1,41 @@
+.forgot-container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  text-align: center;
+}
+
+.forgot-head {
+  margin-bottom: 20px;
+}
+
+.forgot-label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  padding: 8px;
+  width: 90%;
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.next-btn,
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #348feb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+  background-color: #2674c9;
+}

@@ -6,6 +6,8 @@ import Category from './components/frontend/category/category';
 import Toys from './components/frontend/Toys/Toys';
 import Login from './components/frontend/Login/Login';
 import Signup from './components/frontend/Login/signup/signup';
+import Forgotpass from './components/frontend/forgotpass/forgotpass';
+
 
 
 
@@ -21,6 +23,7 @@ function App() {
         <Route path="/category/:categoryName" element={<Category />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<Forgotpass />} />
 
       </Routes>
     </Router>
