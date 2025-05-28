@@ -16,11 +16,12 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/toys" element={<Toys />} />
         <Route path="/category" element={<Category />} />
         <Route path="/category/:categoryName" element={<Category />} />
+        <Route path="/" element={<Login/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<Forgotpass />} />

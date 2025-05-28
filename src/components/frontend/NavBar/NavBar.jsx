@@ -7,10 +7,8 @@ function NavBar() {
   const navigate = useNavigate();
 
   const handleSearch = () => {
-    // Navigate to /toys with search query in URL params
     navigate(`/toys?search=${encodeURIComponent(inputValue)}`);
   };
-
   const onKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleSearch();
@@ -36,7 +34,7 @@ function NavBar() {
             <button onClick={handleSearch} className='s_icon'>Search</button>
           </div>
           <div className="nav-links">
-            <Link to="/"><button className="button">HOME</button></Link>
+            <Link to="/home"><button className="button">HOME</button></Link>
             <Link to="/about"><button className="button">ABOUT US</button></Link>
             <Link to="/toys"><button className="button">TOYS</button></Link>
           </div>

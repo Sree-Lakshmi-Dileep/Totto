@@ -1,8 +1,8 @@
 .abcontainer{
     background: linear-gradient(to bottom, rgb(111, 111, 178),pink);
-    padding-top: 75px;
-    position: fixed;
-    
+    padding-top: 82px;
+    position: absolute;
+    left: 0;
 }  
 
 .mhead{
@@ -20,24 +20,104 @@
     margin-top: 5px;
 }
 
-.abcontent1{
+.abcontent{
     font-style: italic;
     font-size: large;
     margin-left: 40px;
     margin-right: 20px;
     line-height:30px ;
     word-spacing: 10px;
+    background-color: rgb(182, 130, 231);
+    border-radius: 10px;
+    
 
 
 }
 
-.sshead{
-    text-align: center;
-    color: rgb(25, 25, 144);
-}
+
+
 .scontent{
-    text-align: center;
     font-style: italic;
-    font-size:larger;
+    font-size: large;
+    
+    line-height:30px ;
     word-spacing: 10px;
+    margin-top: 30px;
+    margin-left: 30px;
+
+
+}
+.sscontent{
+    font-style: italic;
+    font-size: large;
+    
+    line-height:30px ;
+    word-spacing: 10px;
+    margin-top: 30px;
+
+}
+
+.ssscontent{
+    font-style: italic;
+    font-size: large;
+    
+    line-height:30px ;
+    word-spacing: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+.ab_img1{
+    width: 1000px;
+    height: 190px;
+    margin-right: 30px;
+}
+
+.ab_img2{
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.ab_img3{
+    width: 220px;
+    height: 190px;
+    margin-left: 20px;
+}
+
+.ab_img4{
+    width: 300px;
+    height: 200px;
+      margin-left: 20px;
+}
+
+.a{
+   display: flex;
+   background-color: rgb(182, 130, 231);
+   border-radius: 20px;
+   margin-left: 40px;
+    margin-right: 20px;
+}
+
+.b{
+   display: flex;
+   background-color: rgb(182, 130, 231);
+   border-radius: 20px;
+   margin-left: 40px;
+    margin-right: 20px;
+}
+
+.c{
+    display: flex;
+   background-color: rgb(182, 130, 231);
+   border-radius: 20px;
+   margin-left: 40px;
+    margin-right: 20px;
+}
+.d{
+    display: flex;
+   background-color: rgb(182, 130, 231);
+   border-radius: 20px;
+   margin-left: 40px;
+    margin-right: 20px;
 }

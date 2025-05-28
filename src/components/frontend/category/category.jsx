@@ -1,13 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-//import toys from '../Toys/Toys'; // Adjust path as needed
 import toys from '../Toys/ToyList';
 import './category.css'
 
 function CategoryToysPage() {
   const { categoryName } = useParams();
 
-  // Match category name ignoring case
   const filteredToys = toys.filter(
   toy =>
     toy.category &&
@@ -30,8 +28,6 @@ function CategoryToysPage() {
           ))
         ) : (
           <p>No toys found in this category.</p>
-          
-
         )}
       </div>
     </div>

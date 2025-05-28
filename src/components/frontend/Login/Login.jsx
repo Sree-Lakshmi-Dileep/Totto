@@ -23,7 +23,7 @@ function Login() {
             Login
           </button>
           <div className="log_link">
-            <Link to="/" className="skip-button">⏮️ Skip</Link>
+            <Link to="/home" className="skip-button">⏮️ Skip</Link>
            <Link to="/forgot-password">Forgot password?</Link>         </div>
 
         </form>

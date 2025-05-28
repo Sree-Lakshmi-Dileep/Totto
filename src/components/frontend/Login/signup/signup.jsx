@@ -29,10 +29,7 @@ function Signup() {
     e.preventDefault();
     console.log('Signup Data:', formData);
 
-    // Optionally store data in localStorage or send to backend
-    // localStorage.setItem("userData", JSON.stringify(formData));
-
-    // ✅ Redirect to login page after signup
+    
     navigate('/login');
   };
 
