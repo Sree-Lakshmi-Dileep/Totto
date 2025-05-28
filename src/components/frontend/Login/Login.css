@@ -10,26 +10,26 @@
 .div2{
     background-color: antiquewhite;
     margin-top: 200px;
-    margin-left: 450px;
-    width: 600px;
+    margin-left: 500px;
+    width: 500px;
     height: 300px;
 }
 
 .l_head{
     text-align: center;
-    padding-top: 20px;
+    padding-top: 5px;
     
 }
 
 .d_email{
-    margin-left: 180px;
+    margin-left: 80px;
     margin-top: 30px;
     height: 25px;
 
 }
 
 .d_pass{
-    margin-left: 175px;
+    margin-left: 80px;
     margin-top: 30px;
     height: 10px;
 
@@ -37,7 +37,7 @@
 
 .submitbutton{
     
-    margin-left: 250px;
+    margin-left: 225px;
     margin-top: 50px;
     height: 20px;
     cursor: pointer;
@@ -47,13 +47,15 @@
 
 .i_email{
     margin-left: 30px;
+    width: 250px;
 }
 
 .i_pass{
     margin-left: 10px;
+    width: 250px;
 }
 .sign{
-    margin-left: 170px;
+    margin-left: 125px;
     margin-top: 30px;
 }
 
@@ -63,7 +65,21 @@
     
 }
 
-.forgot{
-    margin-left: 400px;
+.log_link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px; /* space below the buttons */
+   padding: 0 40px;
 
+} 
+.skip-button,
+.forgot-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  
 }
