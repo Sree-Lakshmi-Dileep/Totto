@@ -10,10 +10,39 @@ function useQuery() {
 function Toys() {
   const query = useQuery();
   const searchQuery = query.get('search') || '';
+  const priceQuery = query.get('price');
 
-  const filteredToys = toys.filter(toy =>
-    toy.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const parsePrice = (price) => {
+    if (typeof price === 'string') {
+      return parseInt(price.replace(/[₹,]/g, ''), 10);
+    }
+    return price;
+  };
+
+  const filterByPrice = (toy) => {
+    const price = parsePrice(toy.price);
+
+    switch (priceQuery) {
+      case 'Under ₹250':
+        return price < 250;
+      case '₹250 - ₹500':
+        return price >= 250 && price <= 500;
+      case '₹500 - ₹750':
+        return price > 500 && price <= 750;
+      case '₹750 - ₹1000':
+        return price > 750 && price <= 1000;
+      case 'Above ₹1000':
+        return price > 1000;
+      default:
+        return true;
+    }
+  };
+
+  const filteredToys = toys
+    .filter(toy =>
+      toy.name.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .filter(filterByPrice);
 
   return (
     <div className='toycontain'>
@@ -24,12 +53,12 @@ function Toys() {
             <div key={toy.id} className="toy-card">
               <img src={toy.imageUrl} alt={toy.name} width="200" />
               <h3>{toy.name}</h3>
-              <p>INR {toy.price.toFixed(2)}</p>
+              <p> ₹{toy.price.toFixed(2)}</p>
               <button className="more">view details</button>
             </div>
           ))
         ) : (
-          <p>No toys found matching "{searchQuery}"</p>
+          <p>No toys found matching "{searchQuery || priceQuery}"</p>
         )}
       </div>
     </div>
