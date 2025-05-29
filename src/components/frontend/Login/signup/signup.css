@@ -1,13 +1,23 @@
-.signup-container{
-    margin-top: 250px;
+.scontainer1{
+    background-color: rgb(241, 204, 216);
+    height: 1000px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    
+}
+
+.scontainer2{
     background: linear-gradient(to bottom, rgb(47, 143, 227),rgb(240, 72, 193));
     width: 500px;
-    height: 200px;
+    height: 300px;
     margin-left: 500px;
     border-radius: 20px;
+    margin-top: 200px;
     
 
 }
+
 
 .signhead{
     text-align: center;
@@ -15,8 +25,17 @@
 }
 
 .s_mail{
-    padding-left: 140px;
+    padding-left: 100px;
+    
 }
+.s_email
+{
+    width: 250px;
+}
+.s1{
+    margin-top:60px ; 
+}
+
 
 .next{
     margin-left: 220px;
@@ -63,4 +82,8 @@
 
 .sub3:hover{
     background-color: rgb(11, 215, 123);
+}
+
+.dob{
+    width: 200px;
 }

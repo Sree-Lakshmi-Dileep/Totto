@@ -118,7 +118,8 @@
 }
 
 .b_login{
-  margin-left: 100px;
+  margin-left: 50px;
+  margin-right: 30px;
   width: 80px;
   height: 30px;
   border-radius: 10px;
@@ -128,4 +129,51 @@
 .b_login:hover{
     background-color: rgb(46, 4, 42);
     color: rgb(235, 240, 240);
+}
+.price-btn{
+  width: 90px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-bottom: 30px;
+}
+
+.price-btn:hover {
+  background-color: rgb(46, 4, 42);
+  color: rgb(235, 240, 240);
+}
+
+
+.price-dropdown{
+  background-color: white;
+  margin-top: 100px;
+}
+
+.price-dropdown {
+  position: absolute;
+  top: 100%;
+  
+  
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.price-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.price-item:hover {
+  background-color: #f8f8f8;
+}
+
+.price-filter {
+  position: relative; /* Important: makes dropdown position relative to this */
+  display: inline-block;
 }

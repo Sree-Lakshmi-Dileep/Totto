@@ -34,19 +34,22 @@ function Signup() {
   };
 
   return (
-    <div className="signup-container">
+    <div className="scontainer1">
+     <div className="scontainer2">
       <h2 className='signhead'>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         {step === 1 && (
           <>
-            <label className='s_mail'>Email:</label>
+            <div className="s1">
+              <label className='s_mail'>Email:</label>
             <input
               type="email"
-              name="email"
+              className='s_email'
               value={formData.email}
               onChange={handleChange}
               required
             /> <br />
+            </div>
             <button type="button" className='next' onClick={nextStep}>Next</button>
           </>
         )}
@@ -80,7 +83,7 @@ function Signup() {
             <label className='sign3'>Date of Birth:</label>
             <input
               type="date"
-              name="dob"
+              className='dob'
               value={formData.dob}
               onChange={handleChange}
               required
@@ -89,6 +92,7 @@ function Signup() {
           </>
         )}
       </form>
+     </div>
     </div>
   );
 }
