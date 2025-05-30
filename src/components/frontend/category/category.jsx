@@ -1,17 +1,18 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';  // <-- import useNavigate
 import toys from '../Toys/ToyList';
-import './category.css'
+import './category.css';
 
 function CategoryToysPage() {
   const { categoryName } = useParams();
+  const navigate = useNavigate();  // <-- initialize navigate
 
   const filteredToys = toys.filter(
-  toy =>
-    toy.category &&
-    categoryName &&
-    toy.category.toLowerCase() === categoryName.toLowerCase()
-);
+    (toy) =>
+      toy.category &&
+      categoryName &&
+      toy.category.toLowerCase() === categoryName.toLowerCase()
+  );
 
   return (
     <div className='contain'>
@@ -22,8 +23,13 @@ function CategoryToysPage() {
             <div key={toy.id} className="toy-card">
               <img src={toy.imageUrl} alt={toy.name} />
               <h3>{toy.name}</h3>
-              
-              <p>INR {toy.price.toFixed(2)}</p>
+              <p>₹{toy.price.toFixed(2)}</p>
+              <button
+                className="more"
+                onClick={() => navigate(`/toys/${toy.id}`)}  // <-- add navigation here
+              >
+                view details
+              </button>
             </div>
           ))
         ) : (

@@ -75,7 +75,7 @@ function Home() {
           <div className="grid-item">
             <h1>USEFUL LINKS</h1>
             <div className="list">
-              <li>About Us</li>
+              <Link to="/about"><li>About Us</li></Link>
               <li>Bulk Ordering</li>
               <li>Cancellation Policy</li>
             </div>

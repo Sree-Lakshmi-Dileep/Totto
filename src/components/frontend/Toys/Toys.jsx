@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Toys.css';
 import toys from './ToyList';
 
@@ -9,6 +9,7 @@ function useQuery() {
 
 function Toys() {
   const query = useQuery();
+  const navigate = useNavigate(); // ✅ Added
   const searchQuery = query.get('search') || '';
   const priceQuery = query.get('price');
 
@@ -54,7 +55,12 @@ function Toys() {
               <img src={toy.imageUrl} alt={toy.name} width="200" />
               <h3>{toy.name}</h3>
               <p> ₹{toy.price.toFixed(2)}</p>
-              <button className="more">view details</button>
+              <button
+                className="more"
+                onClick={() => navigate(`/toys/${toy.id}`)} // ✅ Added this
+              >
+                view details
+              </button>
             </div>
           ))
         ) : (
