@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Toys.css';
-import toys from './ToyList';
+import toys from '../Toys/ToyList';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -9,10 +9,11 @@ function useQuery() {
 
 function Toys() {
   const query = useQuery();
-  const navigate = useNavigate(); // ✅ Added
+  const navigate = useNavigate();
   const searchQuery = query.get('search') || '';
   const priceQuery = query.get('price');
 
+  // Helper to parse price string or number into a number
   const parsePrice = (price) => {
     if (typeof price === 'string') {
       return parseInt(price.replace(/[₹,]/g, ''), 10);
@@ -20,6 +21,7 @@ function Toys() {
     return price;
   };
 
+  // Filter function based on price ranges from URL param
   const filterByPrice = (toy) => {
     const price = parsePrice(toy.price);
 
@@ -39,6 +41,7 @@ function Toys() {
     }
   };
 
+  // Apply search and price filters
   const filteredToys = toys
     .filter(toy =>
       toy.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -46,20 +49,20 @@ function Toys() {
     .filter(filterByPrice);
 
   return (
-    <div className='toycontain'>
-      <h1 className='mainhead'>All Toys</h1>
+    <div className="toycontain">
+      <h1 className="mainhead">All Toys</h1>
       <div className="toy-list">
         {filteredToys.length > 0 ? (
           filteredToys.map(toy => (
             <div key={toy.id} className="toy-card">
               <img src={toy.imageUrl} alt={toy.name} width="200" />
               <h3>{toy.name}</h3>
-              <p> ₹{toy.price.toFixed(2)}</p>
+              <p>₹{toy.price.toFixed(2)}</p>
               <button
                 className="more"
-                onClick={() => navigate(`/toys/${toy.id}`)} // ✅ Added this
+                onClick={() => navigate(`/toys/${toy.id}`)}
               >
-                view details
+                View Details
               </button>
             </div>
           ))

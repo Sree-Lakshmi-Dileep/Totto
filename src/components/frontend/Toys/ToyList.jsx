@@ -86,8 +86,8 @@ const toys = [
   id:11 ,
   name: "Wooden Alphabet",
   category: "education",
-  description: ".btbtyht",
-  imageUrl: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSKuAwYxLinmT8L-vXjWcaZcP_y94ke_rNZ6QX00KTq_zzHLRGOR_AQyvrYSq4S9coVNAMyrZj3U-EKE-9gLqereOgQEQsfIQ3LInnqQbkrz8qa2zhO1OUPFg",
+  description: "Discover learning with the ABCD Body Parts Wooden Jigsaw Puzzle!Introduce your child to the fascinating world of body parts with the ABCD Wooden Jigsaw Puzzle! Perfect for children aged 3 and above, this colorful and interactive puzzle enhances cognitive skills, fine motor skills, and body awareness. Each piece is crafted from high-quality, non-toxic wood, ensuring safety and durability. This engaging puzzle not only entertains but also educates, making it an essential addition to any child's learning toolkit",
+  imageUrl: "https://brainybearstore.com/cdn/shop/files/Uppercase-Alphabet-Puzzle.jpg?v=1740655753" ,
   price:78 ,
 },
 {
