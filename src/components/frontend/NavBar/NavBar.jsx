@@ -77,21 +77,28 @@ function NavBar() {
 
       <div className="right">
         <div className="icon-container">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png"
-            className="cart"
-            alt="Cart"
-          />
-          <span className="icon-label">Cart</span>
-        </div>
-        <div className="icon-container">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1040/1040260.png"
-            className="favour"
-            alt="Favourites"
-          />
-          <span className="icon-label">Favourites</span>
-        </div>
+  <div className='favdiv'>
+    <Link to="/favourites">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/4340/4340223.png"
+        className="favour"
+        alt="Favourites"
+      />
+    </Link>
+  </div>
+
+  <div className='cartdiv'>
+    <Link to="/Cart">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
+        className="cart"
+        alt="Cart"
+      />
+    </Link>
+  </div>
+</div>
+
+        
         <div className="price-filter" ref={dropdownRef}>
               <button className="price-btn" onClick={() => setShowPriceDropdown(!showPriceDropdown)}>
                 Search by Price

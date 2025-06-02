@@ -8,6 +8,9 @@ import ToyDetails from './components/frontend/Toys/ToyDetail';
 import Login from './components/frontend/Login/Login';
 import Signup from './components/frontend/Login/signup/signup';
 import Forgotpass from './components/frontend/forgotpass/forgotpass';
+import FavouritesPage from './components/frontend/NavBar/favourites';
+import Cart from './components/frontend/NavBar/cart';
+
 
 
 
@@ -27,6 +30,9 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<Forgotpass />} />
+        <Route path="/favourites" element={<FavouritesPage />} />
+        <Route path="/cart" element={<Cart/>}/>
+
 
       </Routes>
     </Router>
