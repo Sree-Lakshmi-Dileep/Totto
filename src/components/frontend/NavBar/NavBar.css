@@ -85,12 +85,14 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-left: 300px;
 }
 
 .icon-container {
   display: flex;
   gap: 8px; /* Adds space between icons */
   align-items: center;
+  padding-right: 40px;
 }
 
 .favour,
@@ -99,22 +101,19 @@
   height: 30px;
   cursor: pointer;
 }
-.favdiv{
-  margin-left: 40px;
-    margin-right: -100px;
+.favdiv {
+  margin-left: 0;
+  margin-right: 40px;
 }
 
-.cartdiv{
-   margin-left: 10px;
-   margin-right: 50px;
+.cartdiv {
+  margin-left: 10px;
+  margin-right: 20px;
 }
-
 
 .icon-container img {
-  width: 35px; /* or your preferred size */
-  height: 35px;
-  margin-left: 100px;
-  padding-left: 80px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .icon-label {

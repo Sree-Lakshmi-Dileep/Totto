@@ -77,18 +77,19 @@ function NavBar() {
 
       <div className="right">
         <div className="icon-container">
-  <div className='favdiv'>
-    <Link to="/favourites">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/4340/4340223.png"
-        className="favour"
-        alt="Favourites"
-      />
-    </Link>
-  </div>
+<div className="favdiv">
+  <Link to="/favourites">
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4340/4340223.png"
+      className="favour"
+      alt="Favourites"
+    />
+  </Link>
+</div>
+
 
   <div className='cartdiv'>
-    <Link to="/Cart">
+    <Link to="/cart">
       <img
         src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
         className="cart"
