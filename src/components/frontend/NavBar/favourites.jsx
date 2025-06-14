@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import toys from '../Toys/ToyList'; // use same toy data
-//import './favourites.css'; // optional: add styling
+import './favourites.css'; // optional: add styling
 
 const FavouritesPage = () => {
   const navigate = useNavigate();
