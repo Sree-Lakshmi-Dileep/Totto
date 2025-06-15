@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import toys from '../Toys/ToyList';
-import './ToyDetail.css'
+import './ToyDetail.css';
 
 function ToyDetail() {
   const { toyId } = useParams();
   const toy = toys.find(t => t.id.toString() === toyId);
-
   const [mainImage, setMainImage] = useState('');
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -18,31 +17,36 @@ function ToyDetail() {
     } else if (toy.imageUrl) {
       setMainImage(toy.imageUrl);
     } else if (toy.image) {
-      if (Array.isArray(toy.image)) {
-        setMainImage(toy.image[0]);
-      } else {
-        setMainImage(toy.image);
-      }
+      setMainImage(Array.isArray(toy.image) ? toy.image[0] : toy.image);
     } else {
       setMainImage('');
     }
 
-    setIsFavorite(false); // Reset favorite on toy change
+    const favs = JSON.parse(localStorage.getItem('favorites')) || [];
+    setIsFavorite(favs.some(fav => fav.id === toy.id));
   }, [toy]);
 
-  if (!toy) {
-    return <p>Toy not found.</p>;
-  }
-
   const handleAddToFavorites = () => {
-    setIsFavorite(!isFavorite);
-    // Here you could add your logic to save this state in backend or context
+    const favs = JSON.parse(localStorage.getItem('favorites')) || [];
+    const exists = favs.find(f => f.id === toy.id);
+
+    let updatedFavorites;
+    if (exists) {
+      updatedFavorites = favs.filter(f => f.id !== toy.id);
+      setIsFavorite(false);
+    } else {
+      updatedFavorites = [...favs, toy];
+      setIsFavorite(true);
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
   };
 
   const handleBuyNow = () => {
-    // Here you could redirect to a checkout page or add to cart logic
     alert(`Proceeding to buy "${toy.name}" for ₹${toy.price.toFixed(2)}!`);
   };
+
+  if (!toy) return <p>Toy not found.</p>;
 
   return (
     <div className="toy-details">
@@ -52,8 +56,7 @@ function ToyDetail() {
         ) : (
           <p>No image available.</p>
         )}
-
-        {(toy.images || (toy.image ? (Array.isArray(toy.image) ? toy.image : [toy.image]) : [toy.imageUrl])).map((img, idx) => (
+        {(toy.images || (Array.isArray(toy.image) ? toy.image : [toy.image || toy.imageUrl])).map((img, idx) =>
           img ? (
             <img
               key={idx}
@@ -64,14 +67,14 @@ function ToyDetail() {
               style={{ cursor: 'pointer', width: '50px', marginRight: '5px' }}
             />
           ) : null
-        ))}
+        )}
       </div>
 
       <div className="det-right">
         <h1>{toy.name}</h1>
         <p className="det-p1">{toy.description || "No description available."}</p>
-        <p className='det-p2'><strong>Category:</strong> {toy.category}</p>
-        <p className='det-p3'><strong>Price:</strong> ₹{toy.price.toFixed(2)}</p>
+        <p className="det-p2"><strong>Category:</strong> {toy.category}</p>
+        <p className="det-p3"><strong>Price:</strong> ₹{toy.price.toFixed(2)}</p>
 
         <div className="buttons-container" style={{ marginTop: '20px' }}>
           <button
