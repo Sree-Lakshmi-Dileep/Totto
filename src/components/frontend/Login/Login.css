@@ -1,66 +1,58 @@
 .div1{
     position: fixed;    
-    background-color: rgb(219, 203, 234);
-    width:1550px;
-    height: 800px;
+   background-image: url(
+https://img.freepik.com/premium-photo/charming-isometric-toy-wonderland_1130573-99106.jpg?semt=ais_hybrid&w=740);
+   background-size: cover;
+   background-position: center;
+    width:100vw;
+    height: 100vh;
     left: 0;
-
 }
 
 .div2{
-    background-color: antiquewhite;
+    background-color:rgba(37, 13, 17, 0.545);
     margin-top: 200px;
-    margin-left: 500px;
+    margin-left: 250px;
     width: 500px;
     height: 300px;
+    border-radius: 25px;
 }
 
 .l_head{
     text-align: center;
-    padding-top: 5px;
+    padding-top: 10px;
+    color: antiquewhite;
     
 }
 
-.d_email{
-    margin-left: 80px;
-    margin-top: 30px;
-    height: 25px;
-
+.d_form{
+    padding-left: 50px;
+    margin-top: 20px;
 }
-
-.d_pass{
-    margin-left: 80px;
-    margin-top: 30px;
-    height: 10px;
-
+.d_form input{
+    width: 25vw;
+   
 }
 
 .submitbutton{
     
-    margin-left: 225px;
-    margin-top: 50px;
+    margin-left: 170px;
+    margin-top: 20px;
     height: 20px;
     cursor: pointer;
-    width: 80px;
-    border-radius: 5px;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 10px;
 }
 
-.i_email{
-    margin-left: 30px;
-    width: 250px;
-}
 
-.i_pass{
-    margin-left: 10px;
-    width: 250px;
-}
 .sign{
     margin-left: 125px;
     margin-top: 30px;
 }
 
 .submitbutton:hover{
-    background-color: rgb(9, 176, 26);
+    background-color: rgb(234, 101, 236);
     color: rgb(20, 69, 69);
     
 }
@@ -75,11 +67,21 @@
 } 
 .skip-button,
 .forgot-button {
-  background: none;
-  border: none;
-  color: #007bff;
+  
+  color: #77b0ed;
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
-  
 }
+.sign{
+    margin-top: -1px;
+    color: white;
+}
+
+.signlink{
+    color: #77b0ed;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+
