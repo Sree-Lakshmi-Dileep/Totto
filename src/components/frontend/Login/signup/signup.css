@@ -1,89 +1,56 @@
 .scontainer1{
-    background-color: rgb(241, 204, 216);
-    height: 1000px;
+    background-image: url(
+https://img.freepik.com/premium-photo/back-school-toys-purple-background_980928-83460.jpg       );
+    background-size:  cover;
+    height: 100vh;
     position: fixed;
     left: 0;
-    width: 100%;
+    width: 100vw;
     
 }
 
 .scontainer2{
-    background: linear-gradient(to bottom, rgb(47, 143, 227),rgb(240, 72, 193));
-    width: 500px;
-    height: 300px;
+    background: rgba(70, 166, 168, 0.627);
+    width: 35vw;
+    height: 50vh;
     margin-left: 500px;
     border-radius: 20px;
     margin-top: 200px;
-    
-
+    border: 2px solid black;
 }
-
 
 .signhead{
     text-align: center;
     padding-top: 20px;
+    color: #fff;
 }
 
-.s_mail{
-    padding-left: 100px;
-    
-}
-.s_email
-{
-    width: 250px;
-}
-.s1{
-    margin-top:60px ; 
+.sign_form{
+    padding-left:60px ;
 }
 
-
-.next{
-    margin-left: 220px;
-    margin-top:30px;
-    width: 70px;
-    border-radius: 5px;
-    cursor: pointer;
-    
+.sign_form input{
+    width: 25vw;
 }
 
-
-.next:hover{
-    background-color: rgb(11, 215, 123);
+.sign_dob input{
+    width: 15vw;
+   
 }
 
-.next2{
-    margin-left: 120px;
-    margin-top:30px;
-    width: 70px;
-    border-radius: 5px;
-    cursor: pointer;
-    
+.sign_dob{
+    margin-left: 6vw;
 }
 
-
-.next2:hover{
-    background-color: rgb(11, 215, 123);
-}
-
-.sign2{
-    margin-left: 100px;
-}
-
-.sign3{
-    margin-left: 110px;
-}
-
-.sub3{
-    margin-left:200px ;
-    margin-top: 30px;
-    border-radius: 5px;
+.sign_sub{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin-left:12vw ;
+    margin-top: 20px;
     cursor: pointer;
 }
 
-.sub3:hover{
-    background-color: rgb(11, 215, 123);
-}
-
-.dob{
-    width: 200px;
+.sign_sub:hover{
+    background-color: rgb(151, 18, 148);
 }

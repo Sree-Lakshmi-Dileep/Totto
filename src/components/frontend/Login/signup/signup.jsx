@@ -3,7 +3,6 @@ import './signup.css';
 import { useNavigate } from 'react-router-dom';
 
 function Signup() {
-  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -11,88 +10,70 @@ function Signup() {
     dob: ''
   });
 
-  const navigate = useNavigate(); // ✅ Hook to navigate after signup
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const nextStep = () => {
-    if (step === 2 && formData.password !== formData.confirmPassword) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
       alert("Passwords don't match!");
       return;
     }
-    setStep(step + 1);
-  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
     console.log('Signup Data:', formData);
 
-    
+    // Redirect to login
     navigate('/login');
   };
 
   return (
     <div className="scontainer1">
-     <div className="scontainer2">
-      <h2 className='signhead'>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        {step === 1 && (
-          <>
-            <div className="s1">
-              <label className='s_mail'>Email:</label>
+      <div className="scontainer2">
+        <h2 className='signhead'>Sign Up</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="sign_form">
+            <input type="email"  name="email"  className='s_email'    placeholder='Email Address'
+              value={formData.email}  onChange={handleChange}    required  />
+
             <input
-              type="email"
-              className='s_email'
-              value={formData.email}
+              type="password"
+              name="password"
+              placeholder='Create Password'
+              value={formData.password}
               onChange={handleChange}
               required
-            /> <br />
-            </div>
-            <button type="button" className='next' onClick={nextStep}>Next</button>
-          </>
-        )}
+            />
 
-        {step === 2 && (
-          <>
-            <div className="sign2">
-              <label className='s_pass'>Password:</label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              /> <br /><br />
-              <label className='s_pass'>Confirm Password:</label>
-              <input
-                type="password"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-              />
-              <button type="button" className='next2' onClick={nextStep}>Next</button>
-            </div>
-          </>
-        )}
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder='Confirm Password'
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        {step === 3 && (
-          <>
+
+          <div className="sign_dob">
             <label className='sign3'>Date of Birth:</label>
             <input
               type="date"
+              name="dob"
               className='dob'
               value={formData.dob}
               onChange={handleChange}
               required
-            /> <br />
-            <button type="submit" className='sub3'>Sign Up</button>
-          </>
-        )}
-      </form>
-     </div>
+            />
+          </div>
+
+          <button type="submit" className='sign_sub'>Sign Up</button>
+        </form>
+      </div>
     </div>
   );
 }
